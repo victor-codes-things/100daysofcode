@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- gives a language alongside the root tag-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Ferdinando's Website</title>
+</head>
+<body>
+    <h1>Victor Ferdinando</h1>
+        <p>This is a website about Victor Ferdinando - it's a little test!</p>
+        <p>I'm using this as a repository for code notes too - whilst coding html!</p>
+    <h1>Lists and Unordered Lists</h1>
+        <p>ol for ordered list (numbered) and UL for unordered lists</p>
+        <h2> List of my family. use li to represent an individual element in a list </h2>
+            <ul>
+                <li>Elsie</li>
+                <li>Noah</li>
+                <li>Becky</li>
+                <li>Victor</li>
+                <li><a href="Page2.html">Learn more about Victor</a></li>         
+            </ul>
+        <h2>An ordered list of family members</h2>
+            <ol>
+                <li>Elsie</li>
+                    <ul>
+                        <li>Small</li>
+                        <li>Cute</li>
+                        <li>Angry</li>
+                    </ul>
+                <li>Noah</li>
+                    <ol>
+                        <li>Bigger</li>
+                        <li>Smart</li>
+                        <li>Silly</li>
+                    </ol>
+                <li>Becky</li>
+                <li>Victor</li>
+                <li>Victor</li>         
+            </ol>
+
+    <h1>Anchor elements</h1>
+        <h2>Anchor elements using 'a' tag for inserting links - needs an attribute href</h2>
+
+            <a href="http://www.google.com">I am a link - needs http://www.address.com if on www</a>
+            <p>Otherwise it will think that you are going to a file in the same folder</p>
+            <a href="Page2.html">Learn more about Victor</a>
+
+            
+    <h1>Image elements</h1>
+            <p>Doesn't have an opening and closing tag - just image url.
+                Use src attribute, & alt attribute</p>
+            <div>
+                <p>Here is a picture of ELSIE!</p>
+                <img src="20200328_150914.jpg", width="200", alt="Picture 1 of Elsie">
+                <!--It's bad practive to resize in HTML - use CSS-->
+            </div>
+            <div>
+                <a href="http://www.google.com">I am a link - needs http://www.address.com if on www</a>
+            </div>
+            <p>Here is a different image of something else - taken from the web not locally</p>
+            <img width="200", alt="An image from google" src="https://img.picturequotes.com/2/5/4144/who-is-the-most-awesome-person-today-quote-1.jpg">
+            <p>If a picture is moved to a different folder it would break the link</p>
+            <p>So you would need to link to another folder e.g. if it's within the existing folder</p>
+            <img src="Image folder/869042dc79f7a391d7e0f222a3f082cf.jpg", width="200", alt="Picture 1 of Elsie">
+            <p>You can use an attribute called 'Alt' that holds a text description of the image</p>
+            <p>This is useful for accessibility (i.e. making accessible to all users / screen readers)</p>
+            <p>If you add an alt attribute a screen reader can know what the image is of</p>
+            <p>also if the image doesn't load because the link is broken - alt attribute text will display</p>
+        
+    <h1>Comments</h1>
+            <h2>Comments use !-- as a command and then -- to close comment</h2>
+        <!--Like this-->
+        <p>But better is use Ctrl and / -
+            use the command within VScode to comment things out as clunky syntax</p>
+        <!-- Like this -->
+
+    <h1>Divs and Spans</h1>
+        <div> 
+        <h2>Divs</h2>
+            <p>Used to group sections together and when applying CSS can apply the same formatting to that 'block'</p>
+            <p>Creates a 'block' (all the way across the page) rather than 'inline' text
+                - e.g. for putting a border around a section of text</p>
+        <h2>Spans</h2>
+            <p>Serves a similar purpose to Divs - a generic container but it is an 'inline' element</p>
+            <p>Wrap around any text or content that we want to style with a certain set of CSS on</p>
+            <p>You put a span class = "" and this allows you to surround it with customer formatting</p>
+            <h3>Example - could go style the word 'Google' differently using CSS</h3>
+            <p><a href = "http://www.google.com"> I AM A LINK TO <span>GOOGLE</span>!</a></p>
+        </div>
+    
+    <h1>The Thematic Break (Horizontal Rule> element</h1>
+        <hr>
+        <p>Won't use this very often but - element that doesn't have a closing tag</p>
+        <hr>
+        <p>Represents a break between elements - you can style the line</p>
+        <hr>
+        <p>Could also do this with a border under a h1</p>
+    
+    <h1>Br line break - e.g. could make a bunch of paragraphs but could use line breaks</h1>
+        <p>
+            For example, say this is a poem <br>
+            I want each line on a new line <br>
+            But I don't want to do a new paragraph for each <br>
+            That's kind of cool!<br>     
+        </p>
+
+    <h1>Superscript and subscript</h1>
+        <p>Subscript like <sub>this</sub> </p>
+        <p>Superscript like <sup>this</sup> </p>
+        <p>10<sup>th</sup> January 2021</p>
+        <p>Sometimes e.g. wikipedia use sources like this<a href="http://www.wikipedia.com"><sup>[1]</sup></a></p>#
+    <hr>
+
+    
+
+
+</body>
+</html>
