@@ -61,7 +61,7 @@
             <img width="200", alt="An image from google" src="https://img.picturequotes.com/2/5/4144/who-is-the-most-awesome-person-today-quote-1.jpg">
             <p>If a picture is moved to a different folder it would break the link</p>
             <p>So you would need to link to another folder e.g. if it's within the existing folder</p>
-            <img src="Image folder/869042dc79f7a391d7e0f222a3f082cf.jpg", width="200", alt="Picture 1 of Elsie">
+            <img src="Images/869042dc79f7a391d7e0f222a3f082cf.jpg", width="200", alt="Picture 1 of Elsie">
             <p>You can use an attribute called 'Alt' that holds a text description of the image</p>
             <p>This is useful for accessibility (i.e. making accessible to all users / screen readers)</p>
             <p>If you add an alt attribute a screen reader can know what the image is of</p>
@@ -108,11 +108,33 @@
         <p>Subscript like <sub>this</sub> </p>
         <p>Superscript like <sup>this</sup> </p>
         <p>10<sup>th</sup> January 2021</p>
-        <p>Sometimes e.g. wikipedia use sources like this<a href="http://www.wikipedia.com"><sup>[1]</sup></a></p>#
-    <hr>
+        <p>Sometimes e.g. wikipedia use sources like this<a href="http://www.wikipedia.com"><sup>[1]</sup></a></p>
+        <p>Almost every developer's favourite molecule is Caffeine!: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></p>
+        <p>Another eg. <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1</p>
+        <hr>
 
+    <h1>HTML Entities</h1>
+    <p>&#9824; is an example of a HTML entity code</p>
+    <p>These are sequences within our HTML that we can use that are specific characters<br>
+    These HTML entities allow us to add things in that are hard to type
+    they all start with an & and all end with a semicolon ; <br>
+    <a href = "https://dev.w3.org/html5/html-author/charref">
+        This is the list of references you can use</a> <br>
+    or <a href = "https://entitycode.com/" >Entity codes dot com</a>
+    </p>
+    <h2>Here are a few examples</h2>
+        <ul>
+            <li>e.g. I want to put 1 is less than 6 - <br>
+                VSCode doesn't like you using the less than or GT sign<br>
+                It's better to use entity names or entity codes:<br>
+                &lt; or &gt; e.g. 12 &lt; 16 <br>
+                Or can use &#60; and &#62; to achieve the same thing
+            </li>
+            <li>Another example is a & itself<br>
+                &amp; should be used instead of just & itself
+            </li>
+        </ul>
+    <p><b><h1>&#9731; Snowman Productions <sup>&reg;</sup></h1>	</b></p>
     
-
-
 </body>
 </html>
