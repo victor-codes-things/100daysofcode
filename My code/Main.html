@@ -4,49 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Ferdinando's Website</title>
-    <link rel="stylesheet" type="text/css" href = "C:\Users\becky\Documents\GitHub\100daysofcode\My code\CSS1.css" />
+    <link rel="stylesheet" type="text/css" href = "C:\Users\becky\Documents\GitHub\100daysofcode\My code\CSS1.css"/>
 </head>
 <body>
-    <nav class = "crumbs" >
-        <ol>
-            <li class="crumbs"><a href = "Main.html">Main page</a></li>
-            <li class="crumbs"><a href = "Page2.html">Victor detail page</a></li>
-            <li class="crumbs"><a href = "Page3.html">Other page</a></li>
-        </ol>
+    <nav class = "crumbs">
+        <ul>
+            <li class="crumb"><a href = "Main.html">Main page</a></li>
+            <li class="crumb"><a href = "Page2.html">Victor detail page</a></li>
+            <li class="crumb"><a href = "Page3.html">Other page</a></li>
+        </ul>
     </nav>
+    <hr>
     <main>
         <h1>Victor Ferdinando</h1>
             <p>This is a website about Victor Ferdinando - it's a little test!</p>
             <p>I'm using this as a repository for code notes too - whilst coding html!</p>
         <h1>Lists and Unordered Lists</h1>
-            <p>ol for ordered list (numbered) and UL for unordered lists</p>
-            <h2> List of my family. use li to represent an individual element in a list </h2>
-                <ul>
-                    <li>Elsie</li>
-                    <li>Noah</li>
-                    <li>Becky</li>
-                    <li>Victor</li>
-                    <li><a href="Page2.html">Learn more about Victor</a></li>         
-                </ul>
-            <h2>An ordered list of family members</h2>
-                <ol>
-                    <li>Elsie</li>
-                        <ul>
-                            <li>Small</li>
-                            <li>Cute</li>
-                            <li>Angry</li>
-                        </ul>
-                    <li>Noah</li>
-                        <ol>
-                            <li>Bigger</li>
-                            <li>Smart</li>
-                            <li>Silly</li>
-                        </ol>
-                    <li>Becky</li>
-                    <li>Victor</li>
-                    <li>Victor</li>         
-                </ol>
-
+            <section>
+                <p>ol for ordered list (numbered) and UL for unordered lists</p>
+                <h2> List of my family. use li to represent an individual element in a list </h2>
+                    <ul>
+                        <li>Elsie</li>
+                        <li>Noah</li>
+                        <li>Becky</li>
+                        <li>Victor</li>
+                        <li><a href="Page2.html">Learn more about Victor</a></li>         
+                    </ul>
+                <h2>An ordered list of family members</h2>
+                    <ol>
+                        <li>Elsie</li>
+                            <ul>
+                                <li>Small</li>
+                                <li>Cute</li>
+                                <li>Angry</li>
+                            </ul>
+                        <li>Noah</li>
+                            <ol>
+                                <li>Bigger</li>
+                                <li>Smart</li>
+                                <li>Silly</li>
+                            </ol>
+                        <li>Becky</li>
+                        <li>Victor</li>
+                        <li>Victor</li>         
+                    </ol>
+            </section>
         <h1>Anchor elements</h1>
             <h2>Anchor elements using 'a' tag for inserting links - needs an attribute href</h2>
 
@@ -58,11 +60,11 @@
         <h1>Image elements</h1>
                 <p>Doesn't have an opening and closing tag - just image url.
                     Use src attribute, & alt attribute</p>
-                <div>
-                    <p>Here is a picture of ELSIE!</p>
+                <figure>
+                    <figcaption>Here is a picture of ELSIE!</figcaption>
                     <img src="20200328_150914.jpg", width="200", alt="Picture 1 of Elsie">
                     <!--It's bad practive to resize in HTML - use CSS-->
-                </div>
+                </figure>
                 <div>
                     <a href="http://www.google.com">I am a link - needs http://www.address.com if on www</a>
                 </div>
@@ -159,7 +161,7 @@
             So on medium, it works, but you can't tell when developing what the content is. Easy to get lost in the code!<br>
             Why does it matter? Helps for SEO (Search Engine Optimisation) - so e.g. a 'crawler' can look at all the links in a nav page<br>
             So if you just used 'divs' it's not as easy to tell where the links for navigation are<br>
-            A lot of these elements don't do anything different to divs - they just make it clearer what they are!
+            <aside>A lot of these elements don't do anything different to divs - they just make it clearer what they are!</aside>
         </p>
         <h2>Why use Semantic Markup? #2</h2>
         <p>
@@ -176,11 +178,15 @@
         <ul>
             <li>Section</li>
                 <ul><li>
-                    blah
+                    Represents a standalone section - which doesn't have more specific semantic element to represent it<br>
+                    Typically sections have a heading
                 </li></ul>
             <li>Article</li>
                 <ul><li>
-                    x
+                    Represents a self-contained composition in a document/page intended to be individually distributable or reusable<br>
+                    e.g. a widget for weather forecast (see below)<br>
+                    Examples include: a forum post, a magazine or newspaper article, a blog entry<br>
+                    There should be a header that says what the article is about
                 </li></ul>
             <li>Nav</li>
                 <ul>
@@ -199,15 +205,17 @@
                 </li></ul>
             <li>Header</li>
                 <ul><li>
-                    x
+                    Any sort of introductory content - can also include navigation content (including Nav elements as children?)<br>
+                    Note you can also put more than one Headers and Footers within other elements e.g. within an Article
                 </li></ul>            
             <li>Footer</li>
                 <ul><li>
-                    x
+                    Ending content - will also often include 'Nav' elements as children
                 </li></ul>
             <li>Aside</li>
                 <ul><li>
-                    x
+                    An aside is a portion of a document whose content is only indirectly related to the document's main context<br>
+                    i.e. a sidebar or call-out box
                 </li></ul>
             <li>Summary</li>
                 <ul><li>
@@ -219,16 +227,49 @@
                 </li></ul>
             <li>Time</li>
                 <ul><li>
-                    x
-                </li></ul>  
-            <li>Date</li>
+                    This is a bit different - an inline element that wraps around content that is date or time<br>
+                    Just helps this datetime attribute to make machine readable
+                </li></ul>   
+            <li>Figure</li>
                 <ul><li>
-                    x
-                </li></ul>          
+                    Usually contains an image - and possibly a captain
+                </li></ul>       
         </ul>
         <p>
             A good resource is: <a href = "https://developer.mozilla.org/en-US/docs/Glossary/Semantics">Mozilla on semantics</a> <br>
         </p>
+
+        <hr>
+        <header>Article example</header>
+        <article class="forecast">
+            <h1>Weather forecast for Seattle</h1>
+            <article class="day-forecast">
+                <h2>03 March 2018</h2>
+                <p>Rain.</p>
+            </article>
+            <article class="day-forecast">
+                <h2>04 March 2018</h2>
+                <p>Periods of rain.</p>
+            </article>
+            <article class="day-forecast">
+                <h2>05 March 2018</h2>
+                <p>Heavy rain.</p>
+            </article>
+        </article>
+        <hr>
+
+
+
+
     </main>
+    <hr>
+    <footer>
+        This is my website
+        <ul>
+            <li><a href = "To do">Contact</a></li>
+            <li><a href = "To do">About</a></li>
+            <li><a href = "To do">Privacy Policy</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
