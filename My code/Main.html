@@ -4,137 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Ferdinando's Website</title>
+    <link rel="stylesheet" type="text/css" href = "C:\Users\becky\Documents\GitHub\100daysofcode\My code\CSS1.css" />
 </head>
 <body>
-    <h1>Victor Ferdinando</h1>
-        <p>This is a website about Victor Ferdinando - it's a little test!</p>
-        <p>I'm using this as a repository for code notes too - whilst coding html!</p>
-    <h1>Lists and Unordered Lists</h1>
-        <p>ol for ordered list (numbered) and UL for unordered lists</p>
-        <h2> List of my family. use li to represent an individual element in a list </h2>
-            <ul>
-                <li>Elsie</li>
-                <li>Noah</li>
-                <li>Becky</li>
-                <li>Victor</li>
-                <li><a href="Page2.html">Learn more about Victor</a></li>         
-            </ul>
-        <h2>An ordered list of family members</h2>
-            <ol>
-                <li>Elsie</li>
-                    <ul>
-                        <li>Small</li>
-                        <li>Cute</li>
-                        <li>Angry</li>
-                    </ul>
-                <li>Noah</li>
-                    <ol>
-                        <li>Bigger</li>
-                        <li>Smart</li>
-                        <li>Silly</li>
-                    </ol>
-                <li>Becky</li>
-                <li>Victor</li>
-                <li>Victor</li>         
-            </ol>
+    <nav class = "crumbs" >
+        <ol>
+            <li class="crumbs"><a href = "Main.html">Main page</a></li>
+            <li class="crumbs"><a href = "Page2.html">Victor detail page</a></li>
+            <li class="crumbs"><a href = "Page3.html">Other page</a></li>
+        </ol>
+    </nav>
+    <main>
+        <h1>Victor Ferdinando</h1>
+            <p>This is a website about Victor Ferdinando - it's a little test!</p>
+            <p>I'm using this as a repository for code notes too - whilst coding html!</p>
+        <h1>Lists and Unordered Lists</h1>
+            <p>ol for ordered list (numbered) and UL for unordered lists</p>
+            <h2> List of my family. use li to represent an individual element in a list </h2>
+                <ul>
+                    <li>Elsie</li>
+                    <li>Noah</li>
+                    <li>Becky</li>
+                    <li>Victor</li>
+                    <li><a href="Page2.html">Learn more about Victor</a></li>         
+                </ul>
+            <h2>An ordered list of family members</h2>
+                <ol>
+                    <li>Elsie</li>
+                        <ul>
+                            <li>Small</li>
+                            <li>Cute</li>
+                            <li>Angry</li>
+                        </ul>
+                    <li>Noah</li>
+                        <ol>
+                            <li>Bigger</li>
+                            <li>Smart</li>
+                            <li>Silly</li>
+                        </ol>
+                    <li>Becky</li>
+                    <li>Victor</li>
+                    <li>Victor</li>         
+                </ol>
 
-    <h1>Anchor elements</h1>
-        <h2>Anchor elements using 'a' tag for inserting links - needs an attribute href</h2>
+        <h1>Anchor elements</h1>
+            <h2>Anchor elements using 'a' tag for inserting links - needs an attribute href</h2>
 
-            <a href="http://www.google.com">I am a link - needs http://www.address.com if on www</a>
-            <p>Otherwise it will think that you are going to a file in the same folder</p>
-            <a href="Page2.html">Learn more about Victor</a>
-
-            
-    <h1>Image elements</h1>
-            <p>Doesn't have an opening and closing tag - just image url.
-                Use src attribute, & alt attribute</p>
-            <div>
-                <p>Here is a picture of ELSIE!</p>
-                <img src="20200328_150914.jpg", width="200", alt="Picture 1 of Elsie">
-                <!--It's bad practive to resize in HTML - use CSS-->
-            </div>
-            <div>
                 <a href="http://www.google.com">I am a link - needs http://www.address.com if on www</a>
+                <p>Otherwise it will think that you are going to a file in the same folder</p>
+                <a href="Page2.html">Learn more about Victor</a>
+
+                
+        <h1>Image elements</h1>
+                <p>Doesn't have an opening and closing tag - just image url.
+                    Use src attribute, & alt attribute</p>
+                <div>
+                    <p>Here is a picture of ELSIE!</p>
+                    <img src="20200328_150914.jpg", width="200", alt="Picture 1 of Elsie">
+                    <!--It's bad practive to resize in HTML - use CSS-->
+                </div>
+                <div>
+                    <a href="http://www.google.com">I am a link - needs http://www.address.com if on www</a>
+                </div>
+                <p>Here is a different image of something else - taken from the web not locally</p>
+                <img width="200", alt="An image from google" src="https://img.picturequotes.com/2/5/4144/who-is-the-most-awesome-person-today-quote-1.jpg">
+                <p>If a picture is moved to a different folder it would break the link</p>
+                <p>So you would need to link to another folder e.g. if it's within the existing folder</p>
+                <img src="Images/869042dc79f7a391d7e0f222a3f082cf.jpg", width="200", alt="Picture 1 of Elsie">
+                <p>You can use an attribute called 'Alt' that holds a text description of the image</p>
+                <p>This is useful for accessibility (i.e. making accessible to all users / screen readers)</p>
+                <p>If you add an alt attribute a screen reader can know what the image is of</p>
+                <p>also if the image doesn't load because the link is broken - alt attribute text will display</p>
+            
+        <h1>Comments</h1>
+                <h2>Comments use !-- as a command and then -- to close comment</h2>
+            <!--Like this-->
+            <p>But better is use Ctrl and / -
+                use the command within VScode to comment things out as clunky syntax</p>
+            <!-- Like this -->
+
+        <h1>Divs and Spans</h1>
+            <div> 
+            <h2>Divs</h2>
+                <p>Used to group sections together and when applying CSS can apply the same formatting to that 'block'</p>
+                <p>Creates a 'block' (all the way across the page) rather than 'inline' text
+                    - e.g. for putting a border around a section of text</p>
+            <h2>Spans</h2>
+                <p>Serves a similar purpose to Divs - a generic container but it is an 'inline' element</p>
+                <p>Wrap around any text or content that we want to style with a certain set of CSS on</p>
+                <p>You put a span class = "" and this allows you to surround it with customer formatting</p>
+                <h3>Example - could go style the word 'Google' differently using CSS</h3>
+                <p><a href = "http://www.google.com"> I AM A LINK TO <span>GOOGLE</span>!</a></p>
             </div>
-            <p>Here is a different image of something else - taken from the web not locally</p>
-            <img width="200", alt="An image from google" src="https://img.picturequotes.com/2/5/4144/who-is-the-most-awesome-person-today-quote-1.jpg">
-            <p>If a picture is moved to a different folder it would break the link</p>
-            <p>So you would need to link to another folder e.g. if it's within the existing folder</p>
-            <img src="Images/869042dc79f7a391d7e0f222a3f082cf.jpg", width="200", alt="Picture 1 of Elsie">
-            <p>You can use an attribute called 'Alt' that holds a text description of the image</p>
-            <p>This is useful for accessibility (i.e. making accessible to all users / screen readers)</p>
-            <p>If you add an alt attribute a screen reader can know what the image is of</p>
-            <p>also if the image doesn't load because the link is broken - alt attribute text will display</p>
         
-    <h1>Comments</h1>
-            <h2>Comments use !-- as a command and then -- to close comment</h2>
-        <!--Like this-->
-        <p>But better is use Ctrl and / -
-            use the command within VScode to comment things out as clunky syntax</p>
-        <!-- Like this -->
+        <h1>The Thematic Break (Horizontal Rule> element</h1>
+            <hr>
+            <p>Won't use this very often but - element that doesn't have a closing tag</p>
+            <hr>
+            <p>Represents a break between elements - you can style the line</p>
+            <hr>
+            <p>Could also do this with a border under a h1</p>
+        
+        <h1>Br line break - e.g. could make a bunch of paragraphs but could use line breaks</h1>
+            <p>
+                For example, say this is a poem <br>
+                I want each line on a new line <br>
+                But I don't want to do a new paragraph for each <br>
+                That's kind of cool!<br>     
+            </p>
 
-    <h1>Divs and Spans</h1>
-        <div> 
-        <h2>Divs</h2>
-            <p>Used to group sections together and when applying CSS can apply the same formatting to that 'block'</p>
-            <p>Creates a 'block' (all the way across the page) rather than 'inline' text
-                - e.g. for putting a border around a section of text</p>
-        <h2>Spans</h2>
-            <p>Serves a similar purpose to Divs - a generic container but it is an 'inline' element</p>
-            <p>Wrap around any text or content that we want to style with a certain set of CSS on</p>
-            <p>You put a span class = "" and this allows you to surround it with customer formatting</p>
-            <h3>Example - could go style the word 'Google' differently using CSS</h3>
-            <p><a href = "http://www.google.com"> I AM A LINK TO <span>GOOGLE</span>!</a></p>
-        </div>
-    
-    <h1>The Thematic Break (Horizontal Rule> element</h1>
-        <hr>
-        <p>Won't use this very often but - element that doesn't have a closing tag</p>
-        <hr>
-        <p>Represents a break between elements - you can style the line</p>
-        <hr>
-        <p>Could also do this with a border under a h1</p>
-    
-    <h1>Br line break - e.g. could make a bunch of paragraphs but could use line breaks</h1>
-        <p>
-            For example, say this is a poem <br>
-            I want each line on a new line <br>
-            But I don't want to do a new paragraph for each <br>
-            That's kind of cool!<br>     
+        <h1>Superscript and subscript</h1>
+            <p>Subscript like <sub>this</sub> </p>
+            <p>Superscript like <sup>this</sup> </p>
+            <p>10<sup>th</sup> January 2021</p>
+            <p>Sometimes e.g. wikipedia use sources like this<a href="http://www.wikipedia.com"><sup>[1]</sup></a></p>
+            <p>Almost every developer's favourite molecule is Caffeine!: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></p>
+            <p>Another eg. <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1</p>
+            <hr>
+
+        <h1>HTML Entities</h1>
+        <p>&#9824; is an example of a HTML entity code</p>
+        <p>These are sequences within our HTML that we can use that are specific characters<br>
+        These HTML entities allow us to add things in that are hard to type
+        they all start with an & and all end with a semicolon ; <br>
+        <a href = "https://dev.w3.org/html5/html-author/charref">
+            This is the list of references you can use</a> <br>
+        or <a href = "https://entitycode.com/" >Entity codes dot com</a>
         </p>
-
-    <h1>Superscript and subscript</h1>
-        <p>Subscript like <sub>this</sub> </p>
-        <p>Superscript like <sup>this</sup> </p>
-        <p>10<sup>th</sup> January 2021</p>
-        <p>Sometimes e.g. wikipedia use sources like this<a href="http://www.wikipedia.com"><sup>[1]</sup></a></p>
-        <p>Almost every developer's favourite molecule is Caffeine!: C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub></p>
-        <p>Another eg. <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1</p>
+        <h2>Here are a few examples</h2>
+            <ul>
+                <li>e.g. I want to put 1 is less than 6 - <br>
+                    VSCode doesn't like you using the less than or GT sign<br>
+                    It's better to use entity names or entity codes:<br>
+                    &lt; or &gt; e.g. 12 &lt; 16 <br>
+                    Or can use &#60; and &#62; to achieve the same thing
+                </li>
+                <li>Another example is a & itself<br>
+                    &amp; should be used instead of just & itself
+                </li>
+            </ul>
+        <p><b><h1>&#9731; Snowman Productions <sup>&reg;</sup></h1>	</b></p>
         <hr>
-
-    <h1>HTML Entities</h1>
-    <p>&#9824; is an example of a HTML entity code</p>
-    <p>These are sequences within our HTML that we can use that are specific characters<br>
-    These HTML entities allow us to add things in that are hard to type
-    they all start with an & and all end with a semicolon ; <br>
-    <a href = "https://dev.w3.org/html5/html-author/charref">
-        This is the list of references you can use</a> <br>
-    or <a href = "https://entitycode.com/" >Entity codes dot com</a>
-    </p>
-    <h2>Here are a few examples</h2>
+        <h1>Semantic Markup</h1>
+        <h2>Why use Semantic Markup? #1</h2>
+        <p>Consider "what purpose or role does that HTML element have?<br>
+            Example <a href = "http://www.medium.com">Medium.com</a> <br>
+            Once inspected, there's many mark-ups with divs - these are meaningless mark-ups as containers that don't do anything<br>
+            A better example is - <a href = "http://www.stripe.com">Stripe.com</a><br>
+            There is an element called 'main' which is the main content of the page - where Medium site would just have had 'divs'<br>
+            Then it has a header element - functions just like a div but has a definition<br>
+            Then there's a 'section' element that works like a div but has a meaning too<br>
+            Then 'nav' elements which again do what a div but tell us (meaningful) that they are used for navigation<br>
+            These better defined elements are newer e.g. another one is a 'footer' element<br>
+            So on medium, it works, but you can't tell when developing what the content is. Easy to get lost in the code!<br>
+            Why does it matter? Helps for SEO (Search Engine Optimisation) - so e.g. a 'crawler' can look at all the links in a nav page<br>
+            So if you just used 'divs' it's not as easy to tell where the links for navigation are<br>
+            A lot of these elements don't do anything different to divs - they just make it clearer what they are!
+        </p>
+        <h2>Why use Semantic Markup? #2</h2>
+        <p>
+            Using semantic elements also makes code more accessible - e.g. screen readers can use these as hooks /signposts<br>
+            So it can differentiate between e.g. you want to go to the about page, the careers page, you can ask for certain semantic elements<br>
+            e.g. going to the footer or to the navigation bar to get that info
+        </p>
+        <h2>Why use Semantic Markup? #3</h2>
+        <p>
+            It makes your code easier to read yourself and organised!<br>
+            If you want to update a certain section you know where to go easier
+        </p>
+        <h2>Some examples of semantic elements (to use instead of divs / spans) are:</h2>
         <ul>
-            <li>e.g. I want to put 1 is less than 6 - <br>
-                VSCode doesn't like you using the less than or GT sign<br>
-                It's better to use entity names or entity codes:<br>
-                &lt; or &gt; e.g. 12 &lt; 16 <br>
-                Or can use &#60; and &#62; to achieve the same thing
-            </li>
-            <li>Another example is a & itself<br>
-                &amp; should be used instead of just & itself
-            </li>
+            <li>Section</li>
+                <ul><li>
+                    blah
+                </li></ul>
+            <li>Article</li>
+                <ul><li>
+                    x
+                </li></ul>
+            <li>Nav</li>
+                <ul>
+                    <li>
+                        <a href = "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">Mozilla on Nav</a>
+                    </li>
+                    <li>The HTML nav element represents a section of a page whose purpose is to provide navigation links,<br>
+                        either within the current document or to other documents.<br>
+                        Common examples of navigation sections are menus, tables of contents, and indexes.
+                    </li>
+                </ul>
+            <li>Main</li>
+                <ul><li>
+                    The main element - represents the dominant body in the document - should exclude things that would be repeated across pages<br>
+                    For example, not sidebars, navigation bars, headers, footers etc.
+                </li></ul>
+            <li>Header</li>
+                <ul><li>
+                    x
+                </li></ul>            
+            <li>Footer</li>
+                <ul><li>
+                    x
+                </li></ul>
+            <li>Aside</li>
+                <ul><li>
+                    x
+                </li></ul>
+            <li>Summary</li>
+                <ul><li>
+                    x   
+                </li></ul>
+            <li>Details</li>
+                <ul><li>
+                    x
+                </li></ul>
+            <li>Time</li>
+                <ul><li>
+                    x
+                </li></ul>  
+            <li>Date</li>
+                <ul><li>
+                    x
+                </li></ul>          
         </ul>
-    <p><b><h1>&#9731; Snowman Productions <sup>&reg;</sup></h1>	</b></p>
-    
+        <p>
+            A good resource is: <a href = "https://developer.mozilla.org/en-US/docs/Glossary/Semantics">Mozilla on semantics</a> <br>
+        </p>
+    </main>
 </body>
 </html>
