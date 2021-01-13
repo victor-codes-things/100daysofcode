@@ -7,13 +7,15 @@
     <link rel="stylesheet" type="text/css" href = "C:\Users\becky\Documents\GitHub\100daysofcode\My code\CSS1.css"/>
 </head>
 <body>
-    <nav class = "crumbs">
-        <ul>
-            <li class="crumb"><a href = "Main.html">Main page</a></li>
-            <li class="crumb"><a href = "Page2.html">Victor detail page</a></li>
-            <li class="crumb"><a href = "Page3.html">Other page</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class = "crumbs">
+            <ul>
+                <li class="crumb"><a href = "Main.html">Main page</a></li>
+                <li class="crumb"><a href = "Page2.html">Victor detail page</a></li>
+                <li class="crumb"><a href = "Page3.html">Other page</a></li>
+            </ul>
+        </nav>
+    </header>
     <hr>
     <main>
         <h1>Victor Ferdinando</h1>
@@ -257,14 +259,60 @@
             </article>
         </article>
         <hr>
-
-
+        <h1>Colt using screen reader</h1>
+        <p>Built in screenreader for windows machines - on mac it's cmd and f5</p>
+        <p>on windows the screen narrator shortcut is Windows key + Ctrl + Enter</p>
+        <p>Colt compared Medium.com to Stripe.com which used semantic elements so could look at e.g. navigation, main, links</p>
+        <p>This showed that the screen reader was able to understand the content on a website with use of semantic elements</p>
+        <hr>
+        <h1>Emmet - tips and tricks on VSCode</h1>
+        <p><b>Emmet</b> is an extension built into VSCode that helps us write HTML Mark-up with shortcuts</p>
+        <p>Demo on their website <a href = "https://emmet.io/">HERE</a>  </p>
+        <p>Shortened syntax can be run to create HTML elements
+            <br> Emmet is shortened syntax e.g. main>section>h1 then hit tab
+        </p>
+        <nav>
+            <ul>
+                <li>This was just with nav>ul>li and then tab pressed</li>
+                <li>Also can use + to also add a separate element</li>
+                <li>Also can just type an element name and tab rather than using LT and GT signs</li>
+                <li>Also can use the element then * the amount of copies that you want - very useful! e.g. for list bullet points</li>
+                <li>e.g. nav>ul>li*5>a would be a nav with an unordered list with 5 bullet points each other an anchor tab</li>
+                <li>e.g.2 you could also do nav>ul>li*5>a$ which will give each element a number (e.g. could do with h1, h2 etc)</li>
+                <li>Also could add a href to each anchor element like this: nav>ul>li*5>a[href=http://www.$.com] -<br>
+                    which will give you:</li>
+                    <nav>
+                        <ul>
+                            <li><a href="http://www.1.com">1</a></li>
+                            <li><a href="http://www.2.com">2</a></li>
+                            <li><a href="http://www.3.com">3</a></li>
+                            <li><a href="http://www.4.com">4</a></li>
+                            <li><a href="http://www.5.com">5</a></li>
+                        </ul>
+                    </nav>
+                <li>That one can also be useful for class attributes that are numbered (we'll come on to)   </li>
+                <li>Could add to the anchor tag to have a 'click me'</li>
+                <ul>
+                    <li>nav>ul>li*5>a[href=http://www.$.com]{Click Me}</li>
+                    <li><nav>
+                        <ul>
+                            <li><a href="http://www.1.com">Click Me</a></li>
+                            <li><a href="http://www.2.com">Click Me</a></li>
+                            <li><a href="http://www.3.com">Click Me</a></li>
+                            <li><a href="http://www.4.com">Click Me</a></li>
+                            <li><a href="http://www.5.com">Click Me</a></li>
+                        </ul>
+                    </nav></li>
+                </ul>
+            </ul>
+        </nav>
+        
 
 
     </main>
     <hr>
     <footer>
-        This is my website
+        This is my website FOOTER
         <ul>
             <li><a href = "To do">Contact</a></li>
             <li><a href = "To do">About</a></li>
