@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Heaviest Birds Table</title>
 </head>
 <body>
     <header>
@@ -11,12 +11,111 @@
             <ul>
                 <li class="crumb"><a href = "Main.html">Main page</a></li>
                 <li class="crumb"><a href = "Page2.html">Victor detail page</a></li>
-                <li class="crumb"><a href = "Page3.html">Other page</a></li>
+                <li class="crumb"><a href = "Page3.html">Tables</a></li>
+                <li class="crumb"><a href = "Forms.html">Forms</a></li>
             </ul>
         </nav>
     </header>
     <hr>
-    <h1>Awesome page 3!</h1>
-    <p>Yay</p>
+    <h1>Heaviest Birds table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Animal</th>
+                <th>Average mass
+                    [kg (lb)]</th>
+                <th>Maximum mass
+                    [kg (lb)]</th>
+                <th>Flighted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>104 (230)</td>
+                <td>156.8 (346)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali Ostrich</td>
+                <td>90 (200)</td>
+                <td>130 (287)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Wild turkey</td>
+                <td>13.5 (29.8)</td>
+                <td>39 (86)</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1>Heaviest birds (kgs and lbs have a shared header) - using Rowspan and Colspan</h1>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan = "2">Animal</th>
+                <th colspan = "2">Average Mass</th>
+                <th rowspan = "2">Flighted</th>
+            </tr>
+            <tr>
+                <th>KG</th>
+                <th>LB</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>104</td>
+                <td>(230)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali Ostrich</td>
+                <td>90</td>
+                <td>(200)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Wild turkey</td>
+                <td>13.5</td>
+                <td>(29.8)</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <p>Source <a href="https://en.wikipedia.org/wiki/Largest_organisms#Heaviest_living_bird_species">here</a></p>
+    <hr>
+    <h2>Test I did</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Subscription</th>
+                <th>Price</th>
+                <th>Support</th>     
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Free</td>
+                <td>Free</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Personal</td>
+                <td>$9.99</td>
+                <td>Weekdays</td>
+            </tr>
+            <tr>
+                <td>Business</td>
+                <td>$49.99</td>
+                <td>24/7</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
 </body>
 </html>
