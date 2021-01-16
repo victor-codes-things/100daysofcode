@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forms</title>
 </head>
 <body>
     <header>
@@ -17,6 +17,118 @@
         </nav>
     </header>
     <hr>
-    
+    <main>
+    <h1>The form element - creating forms</h1>
+    <p>The form element itself is a shell or container that doesn't have any visual impact
+        <br>E.g. inputs for a login screen
+        <br>E.g. Inputs for name, surname, email, password inputs 
+        <br>E.g. radio button to select a subscription type
+        <br>e.g. a form for a search bar within a webpage! 'search this page'
+        <br>The form element is an input to group together - and it dictates where the form data should be sent when it's submitted!
+        <br>So from that perspective it's a bit more useful than some of those other elements
+        <ul>
+            <li>The 'action attribute' within the form element specifies where the form data should be sent</li>
+            <ul>
+                <li>For example if you set it as action = "/search/" then it will submit the form to <br>
+                    e.g. www.websitename.com/search/?q=inputoftheform<br>
+                    i.e. relative to the website we're currently on<br>
+                    <b>Note that spaces are adjusted to '%20' in the url</b></li>
+                <li>When you submit a form, a HTTP request is made. The method determines the type</li>
+            </ul>
+            <li>The 'method' attribute specifies which HTTP method should be used (to be covered later)</li>
+            <ul>
+                <li>'Get' requests and</li>
+                <li>'Post' requests - forget this for now will be covered later!</li>
+            </ul>
+        </ul>
+        <br>
+
+    </p>
+    <hr>
+    <h2>Example of a form here with inputs (most common):</h2>
+    <p>Types of inputs available listed <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">HERE</a></p>
+    <form action="">
+        <input type=""> This defaults to a text input <br><br>
+        <input type="text"> No difference here but it's better practice <br><br>
+        <input type="password"> Same element but the inputs are *'d out <br><br>
+        <input type="color"> This gives us a colour picker - will look different depending on browser <br><br>
+        <input type="month"> This is a month input<br><br>
+        <input type="number"> Looks like a text input but I can't input letters - and can move up and down with arrows<br><br>
+        <input type="radio"> Covered in a separate video - as with 'range' (scroll bar)<br><br>
+    </form>
+    <p>
+        The input has no closing tag. The input 'type' lets you choose from 20+.<br>
+        There are other attributes too for inputs<br>
+        Note that default will be to a text input (but best practice to specify even if text)
+    </p>
+    <h2>Input with placeholder text</h2>
+    <form action="">
+        <input type="text" placeholder="Hello"> <br><br>
+        <input type="password" placeholder="Enter your password"> <br><br>
+    </form>
+    <hr>
+    <h2>Properly LABELLING inputs</h2>
+    <p>Labels are important for accessibility and making your forms easier to use</p>
+    <p>Labels are associated with the inputs to help screenreaders know what label goes with what inputs</p>
+    <p>The id attribute within the input should be unique and be used in the 'for' attribute within the associated label</p>
+    <p>In this example below - you can click the label also to trigger the tickbox where a label has been used</p>
+    <h3>Without labels (wrong)</h3>
+    <form action="">
+        <p>
+            <b>Do you like cheese? </b><input type="checkbox">
+        </p>
+    </form>
+    <h3>WITH labels (correct) - note you can click the leading text too</h3>
+    <form action="">
+        <b><label for="cheese">Do you like cheese? </label></b>
+        <input type="checkbox" name="cheese" id="cheese">
+    </form>
+    <p>Note DON'T re-use the id! In this case id was 'cheese' so don't reuse that</p>
+    <br>
+    <h3>Another example of using a correct label</h3>
+    <form action="/tacos/">
+        <label for = "Username">Enter a Username:</label>
+        <input type="text" id="Username" placeholder="Insert username">
+    </form>
+    <p>Note that my web browser actually recognised this intelligently and suggested some usernames! Spooky!</p>
+    <h3>Another less common way - nesting the label inside the input</h3>
+    <p>For this you technically don't need a 'for' and 'id' but this is less standard practice</p>
+    <form>
+        <label>
+            Enter a number:
+            <input type="number" placeholder ="Enter a number">
+        </label>
+    </form>
+    <hr>
+    <h2>BUTTONS!</h2>
+    <p>Very common whether in a form or not - could also be links looking like buttons due to CSS<br>
+        The element called 'Button' is for this - and can be used for submitting forms. Take the examples above again<br>
+        Keep the button within the form for it to make the button take the form's 'action' when pressed.
+    </p>
+        <hr>
+        <form action="/tacos/">
+            <label for = "Username2">Enter a Username:</label>
+            <input type="text" id="Username2" placeholder="Insert username"> <br><br>
+            <b><label for="cheese2">Do you like cheese? </label></b>
+            <input type="checkbox" name="cheese" id="cheese2"> <br><br>
+            <label for = "password2">Insert a password here:</label>
+            <input type="password" placeholder="password here" id="password2"> <br><br>
+            <button>Submit! (default button type if undefined and in a form)</button> <br>
+            <button type="button">This button won't submit the form (even though it's in the form) as it's type is button</button> <br>
+            <button type="submit">This button will submit the form - type defined as submit</button>
+        </form>
+        <br>
+        <button>This button is outside the form element so won't do anything related to the form<br>
+            (can do things itself with e.g. javascript)</button>
+    <hr>
+        <form action="/tacos/">
+            <p>This is an odder way to make the input a submit button effectively - bad practice</p>
+            <input type="submit" value ="Input as submit">Input as a submit - note you can't change it easily (have to use 'value' attribute)<br>
+            <br>VS!<br>
+            <button type="submit">Button as a submit</button> Note you just set the text here so better practice
+        </form>
+    <hr>
+    <h1>NEXT - NAME in forms - what's happening with the data and where's it going?</h1>
+    </main>
 </body>
 </html>
