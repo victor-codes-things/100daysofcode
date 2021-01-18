@@ -128,7 +128,44 @@
             <button type="submit">Button as a submit</button> Note you just set the text here so better practice
         </form>
     <hr>
-    <h1>NEXT - NAME in forms - what's happening with the data and where's it going?</h1>
-    </main>
+    <h1>NAME in forms</h1>
+    <p>Determines: what's happening with the data and where's it going?
+        <br>When you submit it sends a HTTP request to the form action
+        <br>When it sends the data - where is it sending it? e.g. name = q 
+        <br>Way of referring to the value when sending it to the server
+        <br>(so the name is what the server's looking for)
+        <br>Name should be put on every single input
+    </p>
+    <form action="/tacos/">
+        <p>
+            <label for = "Username3">Insert Username here:</label>
+            <input type="text" id="Username3" placeholder="Username" name="username">
+        </p>
+        <p>
+            <label for = "Password3">Choose a Password here:</label>
+            <input type="password" id="Password3" placeholder="Password" name="password">
+        </p>
+        <p>
+            <label for = "Colour123">Choose your favourite colour here:</label>
+            <input type="color" id="Colour123" name="Colour">
+        </p>
+        <p>
+            <button type="submit">Create Account</button>
+        </p>
+        
+    </form>
+    <!-- This would give the following when submitted with 'victor' and '1234'
+    http://127.0.0.1:5500/tacos/?username=Victor&password=1234&Colour=%23e00b0b
+    The colour is a hash symbol-->
+    <p>
+        Note at the moment the name is showing up in the URL (this because we're using a get request)
+        <br>Obviously you wouldn't want a password to show up in a url
+        <br>So we'll need to consider e.g. different types of requests<br>
+        HTTP requests including a 'post' request where the data won't be in the URL
+    </p>
+    
+    <hr>
+
+</main>
 </body>
 </html>
