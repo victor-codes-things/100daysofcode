@@ -16,7 +16,7 @@
             </ul>
         </nav>
     </header>
-    <hr>
+    <hr><hr>
     <main>
     <h1>The form element - creating forms</h1>
     <p>The form element itself is a shell or container that doesn't have any visual impact
@@ -127,7 +127,7 @@
             <br>VS!<br>
             <button type="submit">Button as a submit</button> Note you just set the text here so better practice
         </form>
-    <hr>
+        <hr><hr>
     <h1>NAME in forms</h1>
     <p>Determines: what's happening with the data and where's it going?
         <br>When you submit it sends a HTTP request to the form action
@@ -160,12 +160,97 @@
     <p>
         Note at the moment the name is showing up in the URL (this because we're using a get request)
         <br>Obviously you wouldn't want a password to show up in a url
-        <br>So we'll need to consider e.g. different types of requests<br>
-        HTTP requests including a 'post' request where the data won't be in the URL
+        <br>So we'll need to consider e.g. different types of requests
+        <br>HTTP requests including a 'post' request where the data won't be in the URL
     </p>
     
-    <hr>
+    <hr><hr>
+    <h1>Building our own search Forms using another search!</h1>
+    <p>Also note that pressing 'enter' can work the same as clicking a submit button (can still do if you have a button)</p>
+    <article>
+        <h2>Search Google</h2>
+        <form action="https://www.google.com/search">
+            <input type="text" name="q" placeholder="Google Search here" id="Googlesearch">
+            <button type="submit">Search Google</button>    
+        </form>
+    </article>
+    <article>
+        <h2>Search Youtube</h2>
+        <form action="https://www.youtube.com/results">
+            <input type="text" name="search_query" placeholder="Youtube Search here" id="Youtubesearch">
+            <button type="submit">Search YouTube</button>        
+        </form>
+    </article>
+    <article>
+        <h2>Search Reddit</h2>
+        <form action="https://www.reddit.com/search">
+            <input type="text" name="q" placeholder="Reddit Search here" id="Redditsearch">   
+            <button type="submit">Search Reddit</button>     
+        </form>
+    </article>
 
+    <hr><hr>
+    <h1>Radio Buttons, Checkboxes & Selects</h1>
+    <h2>Checkboxes</h2>
+    <p>
+        <form action = "/monster/">
+            <!-- Where you want it to be pre-checked,
+                include 'checked' in the attributes of the input -->
+            <p>Choose your monster's features:</p>
+            <label for="CheckboxTest">Scales</label>
+            <input type="checkbox" id = "CheckboxTest" name = "scales" checked>
+            <br><label for="CheckboxTest2">Horns</label>
+            <input type="checkbox" id = "CheckboxTest2" name = "horns">
+                <br><button type = "submit">BUILD YOUR MONSTER!!!</button>
+        </form>
+        <p>Output of a ticked checkbox is 'on'</p>
+    </p>
+    <h2>Radio Buttons</h2>
+    <p>Like checkboxes except you have a group of them and can only select one</p>
+    <p>
+    <form action="/features/">
+        <p>What is your best feature?</p>
+        <label for="eyes">Eyes</label>
+        <input type="radio" name="feature" id="eyes" value="eyes"><br>
+        <label for="Hair">Hair</label>
+        <input type="radio" name="feature" id="Hair" value="Hair"><br>
+        <label for="Chin">Chin</label>
+        <input type="radio" name="feature" id="Chin" value="Chin"><br>
+        <button>Submit</button>
+        <p>Grouped by having the same 'name' (for the radio selection, only one of)
+            <br>Need to add on an attribute called 'value' when the form is submitted 
+            <br>Otherwise the 'name' will just be 'on' so it won't differentiate between selection
+        </p>
+    </form>
+    </p>
+    <p><b>TRICK - 'inp' and tab will give input with type, name and id using Emmet</p></b>
+    
+    <h2>The 'select' element   </h2>
+    <p>
+        a combination of the select element and the 'option element' <br>
+        For drop-down menus!
+    </p>
+    <p>
+        <form action="/inputs/">
+            <label for="pet-select">Choose your favourite pet:</label>
+            <select name="pets" id="pet-select">
+                <option value="">--Please choose from the below--</option>
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Hamster">Hamster</option>
+                <option value="Parrot">Parrot</option>
+                <option value="Goldfish">Goldfish</option>
+                <option value="Spider">Spider</option>
+            </select>
+            <p>
+            <button>Submit selection</button>
+            </p>
+        </form>
+        <p>Note that you can add to option element the attribute 'selected' to have a different pre-selection</p>
+    </p>
+    <hr><hr>
+
+    
 </main>
 </body>
 </html>
