@@ -249,7 +249,118 @@
         <p>Note that you can add to option element the attribute 'selected' to have a different pre-selection</p>
     </p>
     <hr><hr>
+    <h2>Range, textarea and number inputs</h2>
+    <p>
+        <form action="/rangeinput/" id="Happiness_and_wealth" oninput="result.value=parseInt(Happiness.value)">
+            <label for="Happiness">How happy are you?</label>
+            <input type="range" id="Happiness" name="Happiness" min="0" max="10" step="1" value="0" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="0" label="0">0</option> 
+                <!-- value marks are supported in Chrome but not the labels - needs CSS -->
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5" label="5">5</option>
+                <option value="6"></option>
+                <option value="7"></option>
+                <option value="8"></option>
+                <option value="9"></option>
+                <option value="10" label="10">10</option>
+            </datalist>
+            <output for="Happiness" form = "Happiness_and_wealth" name="result">x </output>
+            <!-- The output thing didn't work -->
+            <p>
+                <label for="Wealth">How wealthy are you?</label>
+                <input type="number" id="Wealth" name="Wealth_level" min="0" max="10" step="1" value="0">
+            </p>
+            <p>
+                <button>Submit</button>
+            </p>
+    </p>    
+        </form>
 
+            <h2>Tried output example - didn't work - tried to use for displaying value associated with a range!</h2>
+            <!-- Took this from Mozilla developer and it didn't work dynamically! -->
+            <P>
+                <form oninput="result.value=parseInt(a.value)+parseInt(b.value)" aria-live="assertive">
+                    <input type="range" id="b" name="b" value="50" /> +
+                    <input type="number" id="a" name="a" value="10" /> =
+                    <output name="result" for="a b">60</output>
+                  </form>
+            </P>
+            <hr><hr>
+            <h2>Test solution</h2>
+            <form>
+                <p>
+                    <label for = "username_input">Username</label>
+                    <input type = "text" placeholder = "username" id = "username_input" name = "username_input"></input>
+                </p>
+                <p>
+                    <label for = "password_input">Password</label>
+                    <input type = "password" placeholder = "password" id = "password_input" name = "password_input"></input>        
+                </p>
+                <p>
+                    <button type="submit">Register</button>      
+                </p>
+            </form>
+            <hr><hr>
+         <h2>Form validations - constraints</h2>
+         <p>
+             e.g. your password must have x y z (special character, a number, etc)<br>
+             but this is the built in validations for forms - others would need to be using javascript (smoother experiences)
+             <br>e.g. on <a href="https://dashboard.stripe.com/register">Stripe Registration site</a> the 'excellent password' popup
+             <br>
+         </p>
+         <p>
+             This is all 'client side validation' - which is done within the browser<br>
+             There is also something called 'server side validation' once a form is submitted<br>
+             To make sure the data meets the server's expectations. e.g. if someone used a terminal to get around client side validation.<br>
+             This was historically the way it was done - input details, press submit, then server would tell you if any issues.<br>
+             Client side validation adds to UX but both are needed really.
+         </p>
+         <h2>Validations Demo</h2>
+         <form action="/dummy/">
+            <p>
+                <label for="first">Enter first name: </label>
+                <input type="text" name="first" id="first" placeholder="First name here" required>
+            </p>
+            <p>- cannot be blank with required attribute</p>
+            <p>
+                <label for="Username">Username:</label>
+                <input type="text" id="Username" name="Username" minlength="5" maxlength="25" required>
+            </p>   
+            <p>- cannot be too short or too long
+                <br>Note - without 'required' too it can be input as blank
+            </p>
+            <p>
+                <label for="Email_address">Email:</label>
+                <input type="email" id="Email_address" name="Email_address" required>
+            </p>   
+            <p>
+                <label for="Favourite_Number">Favourite Number:</label>
+                <input type="number" id="Favourite_Number" name="Favourite_Number" min="0" max="100" required>
+            </p>   
+            <p>- can set min and max numbers for these inputs -<br>
+                can't go higher or lower on scroll and type in and submit will get error message
+            </p>
+            <p>
+                <label for="pathway">Insert a file path:</label>
+                <input type="url" id="pathway" name="pathway" required>
+            </p>
+            <p>Note not checking if it's a real URL, just checking that it's got the valid pattern for the type</p>
+            <button>Submit</button>
+        </form>
+        <h2>
+            Regular expressions
+        </h2>
+        <p>Very useful - will be touched on later on - but at the moment we'll just use the 'Pattern' attribute</p>
+        <h2>Pattern attribute in HTML</h2>
+        <p>
+            see about form - added in 'email' so it requires that the email address has an '@' and something afterwards<br>
+            Note it's not checking that it's a valid email! just checking the pattern<br>
+            Another pattern requests a url, so it looks for pattern: <code>urlscheme://restofurl</code>  
+        </p>
     
 </main>
 </body>
